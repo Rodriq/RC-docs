@@ -1,0 +1,116 @@
+openapi: 3.0.1
+info:
+  title: Testing RC endpoints
+  description: A brief test for my proposal
+  version: "0.1"
+servers:
+- url: https://open.rocket.chat
+paths:
+  /api/v1/shield.svg:
+    get:
+      description: A simple method, requires no authentication, that returns the shield
+        svg(badge) to add in your website. It must have API_Enable_Shields enabled.
+      parameters:
+      - name: channel
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+        example: general
+      - name: icon
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+        example: false
+      - name: type
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+        example: online
+      - name: name
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+        example: Rocket.Chat
+      responses:
+        200:
+          description: Auto generated using Swagger Inspector
+          content:
+            image/svg+xml;charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+      - url: https://open.rocket.chat
+    servers:
+    - url: https://open.rocket.chat
+  /api/v1/login:
+    post:
+      description: Auto generated using Swagger Inspector
+      parameters:
+      - name: password
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+        example: password1234
+      - name: user
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+        example: admin
+      responses:
+        default:
+          description: Auto generated using Swagger Inspector
+      servers:
+      - url: https://open.rocket.chat
+    servers:
+    - url: https://open.rocket.chat
+  /api/v1/info:
+    get:
+      description: A simple method, requires no authentication, that returns information
+        about the server including version information.
+      responses:
+        200:
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+              examples:
+                0:
+                  value: '{"info":{"version":"1.0.0-rc.0"},"success":true}'
+      servers:
+      - url: https://open.rocket.chat
+    servers:
+    - url: https://open.rocket.chat
+components:
+  schemas:
+    inline_response_200_info:
+      type: object
+      properties:
+        version:
+          type: string
+    inline_response_200:
+      type: object
+      properties:
+        success:
+          type: boolean
+        info:
+          $ref: '#/components/schemas/inline_response_200_info'

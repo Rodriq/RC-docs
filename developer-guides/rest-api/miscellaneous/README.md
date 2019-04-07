@@ -1,4 +1,5 @@
 # Miscellaneous Information
+{% include api.html %}
 
 Just some generic information, such as information about the server and authenticated user.
 
