@@ -110,7 +110,7 @@
     <script type="text/javascript">
       window.jekyll = { site: { url: '{{ site.url }}' } };
     </script>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="{{ site.url }}/public/js/index.js?v={{ site.version }}"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
     <script type="text/javascript">
@@ -133,5 +133,9 @@
       <!-- End Google Tag Manager -->
 
   </div>
+  <script>
+    axios.get('https://open.rocket.chat/api/v1/info').then(response => console.log(response.data));
+    console.log('You are welcome here!!')
+  </script>
 </body>
 </html>

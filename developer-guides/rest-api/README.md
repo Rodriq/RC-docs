@@ -16,6 +16,9 @@ When calling a production Rocket.Chat server, ensure it is running via HTTPS and
 - Implement a timed authorization token expiration strategy
 - Ensure the calling user only has permissions for what they are calling and no more
 
+### Test My simulated Interactive APIs Documentation
+[HERE](simulation/)
+
 ### Miscellaneous Information
 
 | Url                       | Short Description                                         | Details Page                           |
