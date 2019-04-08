@@ -1,0 +1,19 @@
+{% assign parameters = site.data.swagger[page.swaggerfile]paths[page.swaggerkey][page.method]parameters %}
+<table>
+ <thead>
+ <tr>
+ <th>Name</th><th>Type</th><th>Description</th><th>Required?</th>
+ </tr>
+ </thead>
+ <!-- For each parameter, get the information from the Swagger file -->
+ {% for parameter in parameters%}
+ {% if parameter.in == include.paramtype %}
+ <tr>
+ <td><code>{{ parameter.name }}</code></td>
+ <td><code>{{ parameter.type }}</code></td>
+ <td>{{ parameter.description }}</td>
+ <td><code>{{ parameter.required }}</code></td>
+ </tr>
+ {% endif %}
+ {% endfor %}
+</table>

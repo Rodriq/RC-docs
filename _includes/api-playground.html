@@ -1,0 +1,101 @@
+<div>
+{% assign methods = site.data.apistore.paths[include.path].[include.method] %}
+<!-- <h5>{{ include.path}}</h5>
+{% assign resnumber = "200" %} -->
+<!-- <h5>{{ [resnumber] }}</h5> -->
+
+<button id="initiateButton" onclick="showPanels()" class="button--full button--dark" style="
+	position:fixed;
+	width: 20%;
+	/*height:60px;*/
+	bottom: 0%;
+	float: right !important;
+	/*right:40px;*/
+	border-radius:20px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+">
+	Try it
+</button>
+
+<form action="">
+	<input style="min-width: 100%; padding: 5px;" class="code--dark" type="text" id="apiUrl" value="https://open.rocket.chat{{include.path}}" disabled="true">
+</form>
+<br>
+<pre class="select--theme-dark theme_type--light " 
+ name="response-position" id="response-position">
+
+{% highlight json %}
+{
+  "success": true,
+  "info": {
+    "version": "0.47.0-develop",
+    "build": {
+      "nodeVersion": "v4.6.2",
+      "arch": "x64",
+      "platform": "linux",
+      "cpus": 4
+    },
+    "commit": {
+      "hash": "5901cc7270e3587101631ee222def950d705c611",
+      "date": "Thu Dec 1 19:08:01 2016 -0200",
+      "author": "Gabriel Engel",
+      "subject": "Merge branch 'develop' into experimental",
+      "tag": "0.46.0",
+      "branch": "experimental"
+    }
+  }
+}
+{% endhighlight %}
+ 
+</pre>
+{% if include.interactive %}
+<hr>
+<span id="play-ground">
+	
+<textarea class="select--theme-light" name="play-position" id="play-position" cols="65" rows="10">
+
+</textarea>
+</span>
+{% endif %}
+</div>
+
+<script>
+	var method = `{{ include.method }}`
+
+	// $('#response-position').text('gfklgmgle.rkm')
+
+	const getUrl = () => $('#apiUrl').val();
+
+	// $(document).ready(function($) {
+	  $('#apiUrl').keypress(function(e) { //use form id
+            if (e.which == 13) {
+                sendRequest(); //-- to validate form 
+                // $('#verifyForm').submit();  // use form id
+                return false;
+            }
+        });
+
+	function showPanels() {
+		console.log('welcome');
+		$("#initiateButton").hide(200);
+		$("#apiUrl").attr('disabled', false);
+		$("#apiUrl").focus();
+	}
+
+	function sendRequest() {
+		axios({
+  			method,
+  			url: getUrl(),
+  			// responseType:'stream'
+		})
+  		.then((response) => { 
+  			var value = JSON.stringify(response.data, undefined, 4);
+  			$('#response-position').html(value)
+  			console.log(value)
+  		})
+  	}
+
+	// });
+
+</script>

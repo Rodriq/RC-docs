@@ -8,6 +8,7 @@ servers:
 paths:
   /api/v1/shield.svg:
     get:
+      authentication: false
       description: A simple method, requires no authentication, that returns the shield
         svg(badge) to add in your website. It must have API_Enable_Shields enabled.
       parameters:
@@ -53,10 +54,34 @@ paths:
               examples: {}
       servers:
       - url: https://open.rocket.chat
+    path: /api/v1/shield.svg
+    description: Returns the shield svg(badge) to add in your website.
+    servers:
+    - url: https://open.rocket.chat
+  /api/v1/info:
+    get:
+      authentication: false
+      description: A simple method, requires no authentication, that returns information
+        about the server including version information.
+      responses:
+        200:
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+              examples:
+                0:
+                  value: '{"info":{"version":"1.0.0-rc.0"},"success":true}'
+      servers:
+      - url: https://open.rocket.chat
+    path: /api/v1/info
+    description: Returns information about the server including version information.
     servers:
     - url: https://open.rocket.chat
   /api/v1/login:
     post:
+      authentication: false
       description: Auto generated using Swagger Inspector
       parameters:
       - name: password
@@ -80,24 +105,8 @@ paths:
           description: Auto generated using Swagger Inspector
       servers:
       - url: https://open.rocket.chat
-    servers:
-    - url: https://open.rocket.chat
-  /api/v1/info:
-    get:
-      description: A simple method, requires no authentication, that returns information
-        about the server including version information.
-      responses:
-        200:
-          description: Auto generated using Swagger Inspector
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/inline_response_200'
-              examples:
-                0:
-                  value: '{"info":{"version":"1.0.0-rc.0"},"success":true}'
-      servers:
-      - url: https://open.rocket.chat
+    path: /api/v1/login
+    description: Auto generated using Swagger Inspector
     servers:
     - url: https://open.rocket.chat
 components:
