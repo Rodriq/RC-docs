@@ -1,6 +1,7 @@
 ---
 method: get
 title: GET /info
+permalink: /info/
 swaggerfile: apistore
 swaggerkey: /get
 parameters: none
@@ -23,36 +24,10 @@ authentication: false
 
 ## Example Call and Result
 
+Here I tried automating a real api request when the `try it` button is clicked. Theres an ability to alter the url and see the realtime response.
+Although this is not at its best, when fully done and error methods handle, it'll work just as expected.
+
 {% include api-playground.html path = "/api/v1/info" method = "get" interactive = false %}
-
-```bash
-curl http://localhost:3000/api/v1/info
-```
-
-## Example Result
-
-<!-- ```json
-{
-  "success": true,
-  "info": {
-    "version": "0.47.0-develop",
-    "build": {
-      "nodeVersion": "v4.6.2",
-      "arch": "x64",
-      "platform": "linux",
-      "cpus": 4
-    },
-    "commit": {
-      "hash": "5901cc7270e3587101631ee222def950d705c611",
-      "date": "Thu Dec 1 19:08:01 2016 -0200",
-      "author": "Gabriel Engel",
-      "subject": "Merge branch 'develop' into experimental",
-      "tag": "0.46.0",
-      "branch": "experimental"
-    }
-  }
-}
-``` -->
 
 ## Change Log
 

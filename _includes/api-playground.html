@@ -1,9 +1,8 @@
----
----
-
+<div>
 {% assign methods = site.data.apistore.paths[include.path].[include.method] %}
-<h5>{{ include.path}}</h5>
-<h5>{{ methods.responses."200" }}</h5>
+<!-- <h5>{{ include.path}}</h5>
+{% assign resnumber = "200" %} -->
+<!-- <h5>{{ [resnumber] }}</h5> -->
 
 <button id="initiateButton" onclick="showPanels()" class="button--full button--dark" style="
 	position:fixed;
@@ -23,9 +22,10 @@
 	<input style="min-width: 100%; padding: 5px;" class="code--dark" type="text" id="apiUrl" value="https://open.rocket.chat{{include.path}}" disabled="true">
 </form>
 <br>
-<pre class="select--theme-dark" 
+<pre class="select--theme-dark theme_type--light " 
  name="response-position" id="response-position">
-{% highlight json lineous %}
+
+{% highlight json %}
 {
   "success": true,
   "info": {
@@ -49,7 +49,6 @@
 {% endhighlight %}
  
 </pre>
-
 {% if include.interactive %}
 <hr>
 <span id="play-ground">
@@ -59,14 +58,14 @@
 </textarea>
 </span>
 {% endif %}
+</div>
+
 <script>
 	var method = `{{ include.method }}`
 
-	// function getUrl() {
-		
-	// }
+	// $('#response-position').text('gfklgmgle.rkm')
 
-	const getUrl = () => console.log($('#apiUrl').val());
+	const getUrl = () => $('#apiUrl').val();
 
 	// $(document).ready(function($) {
 	  $('#apiUrl').keypress(function(e) { //use form id
@@ -85,10 +84,18 @@
 	}
 
 	function sendRequest() {
-        // console.log('enter pressed')
-		getUrl()
-	}
-	
+		axios({
+  			method,
+  			url: getUrl(),
+  			// responseType:'stream'
+		})
+  		.then((response) => { 
+  			var value = JSON.stringify(response.data, undefined, 4);
+  			$('#response-position').html(value)
+  			console.log(value)
+  		})
+  	}
+
 	// });
 
 </script>

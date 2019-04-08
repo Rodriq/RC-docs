@@ -11,7 +11,7 @@ Here, I tried to make a resusable interactive doc fully based on the current doc
 | :--- | :--- | :--- |
 | | | |
 {% for endpoint in endpoints %}
-| `{{ endpoint[1].path }}` | {{ endpoint[1].description }} | | [Link]({% link developer-guides/rest-api/simulation/info/README.md %}) |
+{% capture url %}{{ endpoint[1].path | remove: "/api/v1/" }}{% endcapture %}
+| `{{ endpoint[1].path }}` | {{ endpoint[1].description }} | | [Link]( /{{ url | replace: ".","-" }}/) |
 
 {% endfor %}
- <!-- assign here = endpoint[1].path  remove: "/api/v1/"  -->
