@@ -8,6 +8,7 @@ servers:
 paths:
   /api/v1/shield.svg:
     get:
+      authentication: false
       description: A simple method, requires no authentication, that returns the shield
         svg(badge) to add in your website. It must have API_Enable_Shields enabled.
       parameters:
@@ -59,6 +60,7 @@ paths:
     - url: https://open.rocket.chat
   /api/v1/info:
     get:
+      authentication: false
       description: A simple method, requires no authentication, that returns information
         about the server including version information.
       responses:
@@ -79,6 +81,7 @@ paths:
     - url: https://open.rocket.chat
   /api/v1/login:
     post:
+      authentication: false
       description: Auto generated using Swagger Inspector
       parameters:
       - name: password

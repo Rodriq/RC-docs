@@ -1,0 +1,21 @@
+---
+---
+
+{% assign methods = site.data.apistore.paths[include.path].[include.method] %}
+<h1>{{ include.path}}</h1>
+<hr>
+<h3>{{ methods }}</h3>
+<hr>
+<table>
+ <thead>
+ <tr>
+ <th>URL</th><th>Requires Auth</th><th>HTTP Method</th>
+ </tr>
+ </thead>
+ {% if methods %}
+ <tr>
+ <td>`{{ include.path }}`</td>
+ <td>`{{ methods.authentication }}`</td>
+ <td>`{{ include.method | upcase }}`</td>
+ {% endif %}
+</table>
