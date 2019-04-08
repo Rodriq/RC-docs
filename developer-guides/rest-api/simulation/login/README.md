@@ -1,5 +1,5 @@
 ---
-permalink: /login/
 ---
+<!-- permalink: /login/ -->
 
 # Welcome to login
