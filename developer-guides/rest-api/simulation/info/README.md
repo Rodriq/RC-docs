@@ -5,9 +5,9 @@ swaggerfile: apistore
 swaggerkey: /get
 parameters: none
 endpoint: info
+permalink: /info/
 authentication: false
 --- 
-<!-- permalink: /info/ -->
 
 {% assign apistore = site.data.apistore.paths %}
 {% assign path = "/api/v1/info" %}

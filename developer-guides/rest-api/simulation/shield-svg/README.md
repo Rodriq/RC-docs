@@ -1,5 +1,5 @@
 ---
+permalink: /shield-svg/
 ---
-<!-- permalink: /shield-svg/ -->
 
 # Welcome to {{ page.permalink }}
