@@ -5,6 +5,7 @@ swaggerfile: apistore
 swaggerkey: /get
 parameters: none
 endpoint: info
+permalink: /info/
 authentication: false
 --- 
 
