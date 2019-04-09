@@ -1,18 +1,19 @@
 ---
 method: get
 title: GET /info
-permalink: /info/
 swaggerfile: apistore
 swaggerkey: /get
 parameters: none
 endpoint: info
 authentication: false
 --- 
+<!-- permalink: /info/ -->
 
 {% assign apistore = site.data.apistore.paths %}
 {% assign path = "/api/v1/info" %}
 
-# {{ page.title }}
+# {{ page.title }} 
+<!-- {{ page.path }} {{ site.url }} -->
 
 {{ site.data.apistore.paths[path].get.description }}
 
