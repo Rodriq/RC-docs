@@ -11,10 +11,8 @@ Here, I tried to make a resusable interactive doc fully based on the current doc
 | :--- | :--- | :--- |
 | | | |
 {% for endpoint in endpoints %}
-{% capture url %}{{ endpoint[1].path | remove: "/api/v1/" }}{% endcapture %}
-{% capture realUrl %}{{ url | replace: ".","-" }}{% endcapture %}
-{% capture finalUrl %}{{realUrl}}/README.html{% endcapture  %}
+{% capture url %}{{ endpoint[1].path | remove: "/api/v1/" | replace: ".","-" }}{% endcapture %}
+{% capture finalUrl %}{{url}}/README.html{% endcapture  %}
 | `{{ endpoint[1].path }}` | {{ endpoint[1].description }} | | [Link]({{finalUrl}}) |
 
 {% endfor %}
-<!-- {{ mmm }} -->

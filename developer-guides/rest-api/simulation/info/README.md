@@ -7,7 +7,6 @@ parameters: none
 endpoint: info
 authentication: false
 --- 
-<!-- permalink: /info/ -->
 
 {% assign apistore = site.data.apistore.paths %}
 {% assign path = "/api/v1/info" %}
