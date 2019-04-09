@@ -86,7 +86,7 @@ paths:
       parameters:
       - name: password
         in: query
-        required: false
+        required: true
         style: form
         explode: true
         schema:
@@ -94,7 +94,7 @@ paths:
         example: password1234
       - name: user
         in: query
-        required: false
+        required: true
         style: form
         explode: true
         schema:

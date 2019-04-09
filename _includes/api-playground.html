@@ -52,8 +52,8 @@
 {% if include.interactive %}
 <hr>
 <span id="play-ground">
-	
-<textarea class="select--theme-light" name="play-position" id="play-position" cols="65" rows="10">
+	<h4>Playground</h4>
+<textarea class="select--theme-light" name="play-position" id="play-position" cols="65" rows="10" >
 
 </textarea>
 </span>
@@ -61,18 +61,14 @@
 </div>
 
 <script>
-	var method = `{{ include.method }}`
-
-	// $('#response-position').text('gfklgmgle.rkm')
-
+	var method = `{{ include.method }}`;
 	const getUrl = () => $('#apiUrl').val();
 
 	// $(document).ready(function($) {
-	  $('#apiUrl').keypress(function(e) { //use form id
+	  $('#apiUrl').keypress(function(e) {
             if (e.which == 13) {
-                sendRequest(); //-- to validate form 
-                // $('#verifyForm').submit();  // use form id
-                return false;
+            	event.preventDefault();
+                sendRequest();
             }
         });
 
@@ -81,6 +77,7 @@
 		$("#initiateButton").hide(200);
 		$("#apiUrl").attr('disabled', false);
 		$("#apiUrl").focus();
+		console.log($("#play-ground").css('display'));
 	}
 
 	function sendRequest() {
@@ -90,12 +87,8 @@
   			// responseType:'stream'
 		})
   		.then((response) => { 
-  			var value = JSON.stringify(response.data, undefined, 4);
-  			$('#response-position').html(value)
-  			console.log(value)
+  			$('#response-position').html(JSON.stringify(response.data, undefined, 4))
   		})
-  	}
-
-	// });
+	}
 
 </script>
