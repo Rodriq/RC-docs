@@ -19,7 +19,7 @@
 </button>
 
 <form action="">
-	<input style="min-width: 100%; padding: 5px;" class="code--dark" type="text" id="apiUrl" value="https://open.rocket.chat{{include.path}}" disabled="true">
+	<input style="min-width: 100%; padding: 5px;" class="code--dark" type="text" id="apiUrl" value="http://localhost:3000{{include.path}}" disabled="true">
 </form>
 <br>
 <pre class="select--theme-dark theme_type--light " 
@@ -51,18 +51,19 @@
 </pre>
 {% if include.interactive %}
 <hr>
-<span id="play-ground">
+<div id="play-ground">
 	<h4>Playground</h4>
-<textarea class="select--theme-light" name="play-position" id="play-position" cols="65" rows="10" >
+<textarea class="select--theme-light container" name="play-position" id="play-position" cols="65" rows="10" >
 
-</textarea>
-</span>
+</textarea> &nbsp; <button id="sendParameters" onclick="getParameters()" class="button">Send</button>
+</div>
 {% endif %}
 </div>
 
 <script>
 	var method = `{{ include.method }}`;
-	const getUrl = () => $('#apiUrl').val();
+	var getUrl = () => $('#apiUrl').val();
+	$("#play-ground").hide();
 
 	// $(document).ready(function($) {
 	  $('#apiUrl').keypress(function(e) {
@@ -75,20 +76,34 @@
 	function showPanels() {
 		console.log('welcome');
 		$("#initiateButton").hide(200);
+		$("#play-ground").show(200);
 		$("#apiUrl").attr('disabled', false);
 		$("#apiUrl").focus();
-		console.log($("#play-ground").css('display'));
 	}
 
-	function sendRequest() {
+	function sendRequest(data = '') {
+		console.log(data)
 		axios({
   			method,
   			url: getUrl(),
+				data,
+				headers: {
+        'Content-Type':'application/json',
+    }
   			// responseType:'stream'
 		})
   		.then((response) => { 
   			$('#response-position').html(JSON.stringify(response.data, undefined, 4))
   		})
+	}
+
+	function getParameters(){
+	 var parameters= $("#play-position").val();
+	 console.log(parameters);
+	 var data = JSON.parse(parameters);
+	// console.log(data);
+	 sendRequest(data)
+
 	}
 
 </script>
