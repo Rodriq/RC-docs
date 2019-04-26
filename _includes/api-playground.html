@@ -78,11 +78,8 @@
 		$("#initiateButton").hide(200);
 		$("#play-ground").show(200);
 		$("#apiUrl").attr('disabled', false);
-		if($("#play-position")){
-			$("#play-position").focus();
-		} else {
 		$("#apiUrl").focus();
-		}
+			$("#play-position").focus();
 	}
 
 	function sendRequest(data = '') {
