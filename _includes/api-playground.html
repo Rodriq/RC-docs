@@ -52,7 +52,7 @@
 {% if include.interactive %}
 <hr>
 <div id="play-ground">
-	<h4>Playground</h4>
+	<h4>Playground</h4> &nbsp; example <mark>{ "key1": "value1", "key2": "value2" }</mark>
 <textarea class="select--theme-light container" name="play-position" id="play-position" cols="65" rows="10" >
 
 </textarea> &nbsp; <button id="sendParameters" onclick="getParameters()" class="button">Send</button>
@@ -78,7 +78,11 @@
 		$("#initiateButton").hide(200);
 		$("#play-ground").show(200);
 		$("#apiUrl").attr('disabled', false);
+		if($("#play-position")){
+			$("#play-position").focus();
+		} else {
 		$("#apiUrl").focus();
+		}
 	}
 
 	function sendRequest(data = '') {
