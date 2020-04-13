@@ -12,6 +12,8 @@
   - Google Summer of Code 2017
   - Google Summer of Code 2018
   - Google Summer of Code 2019
+  - Google Summer of Code 2020
+  - Google Season of Docs 2019
   - Promoting
   - Reporting Issues
   - Security:
@@ -42,7 +44,6 @@
     - Sandstorm.io
     - Scalingo
     - Sloppy.io
-    - WeDeploy
     - D2C.io
     - Syncloud.org
   - Docker containers:
@@ -51,6 +52,7 @@
     - High Availability Install
     - Available Images
     - Docker Compose
+  - RocketChatCTL
   - Manual Installation:
     - CentOS
     - Debian
@@ -60,6 +62,7 @@
     - Ubuntu:
       - Snaps:
         - AutoSSL
+    - Univention Corporate Server (UCS)
     - Mongo Options
     - Mongo Versions
     - Mongo Replicas
@@ -73,6 +76,7 @@
   - Mobile and Desktop Apps
   - Updating:
     - From 0.x.x to 0.40.0
+    - To 1.0
   - Minimum Requirements
   - Community Supported Installation:
     - FreeBSD:
@@ -87,19 +91,25 @@
   - Talking to users from another server
   - Channels
   - Messaging
+  - Message Actions
   - Channel Actions
   - Managing your Account
   - End to End Encryption
   - Voice and Video Conferencing
+  - Experimental App
 - Administrator guides:
   - Account Settings
   - Authentication:
     - CAS
     - Ldap
-    - Oauth
+    - Oauth:
+      - Okta
+      - Keycloak
     - SAML:
       - Oracle Cloud
     - WordPress
+  - Custom Emoji
+  - Custom Sounds
   - Database-Migration
   - Email:
     - Setup
@@ -132,12 +142,12 @@
     - Google-Calendar
     - Guggy
     - Jenkins
+    - JFrog Xray
     - Jira
     - MicroBadger
     - NextCloud and WebDAV
     - NewRelic
     - nixstats
-    - Osticket
     - PagerDuty
     - Prometheus
     - ReviewBoard
@@ -159,6 +169,8 @@
   - Livechat:
     - Livechat Queues
     - Omnichannel Integration
+    - WhatsApp Twilio
+  - Message Auditing
   - Notifications:
     - Push Notifications
   - Permissions
@@ -171,9 +183,11 @@
   - Retention Policies
   - Settings Via Env Vars
   - Youtube Broadcasting
+  - Troubleshooting
 - Developer guides:
     - Quick Start
     - Branches and Releases
+    - Client Compatibility Matrix
     - Code Styleguide:
       - less
     - Deeplink
@@ -188,15 +202,12 @@
     - Mobile Apps:
       - Analytics & Data Usage
       - Supporting SSL
-      - Supported Servers Versions
     - Developing Apps:
       - Getting Started
-    - GraphQL API:
-       - Authentication
-       - Schema
-       - Setup
-       - Subscription
-    - Realtime-API:
+    - Two Factor:
+      - Realtime API
+      - REST API
+    - Realtime API:
       - Method Calls:
         - Login
         - Logout
@@ -255,11 +266,16 @@
         - logout
         - me
         - twitter
+      - AutoTranslate:
+        - getSupportedLanguages
+        - saveSettings
+        - translateMessage
       - Channels:
         - addAll
         - AddLeader
         - addModerator
         - addOwner
+        - anonymousread
         - archive
         - close
         - counters
@@ -298,9 +314,18 @@
         - unarchive
       - Chat:
         - delete
+        - followMessage
         - getDeletedMessages
+        - getDiscussions
+        - getMentionedMessages
         - getMessage
         - getMessageReadReceipts
+        - getPinnedMessages
+        - getSnippetedMessages
+        - getSnippetedMessageById
+        - getStarredMessages
+        - getThreadMessages
+        - getThreadsList
         - pinMessage
         - postMessage
         - react
@@ -308,6 +333,9 @@
         - search
         - starMessage
         - sendMessage
+        - syncThreadMessages
+        - syncThreadsList
+        - unfollowMessage
         - unPinMessage
         - unStarMessage
         - update
@@ -315,9 +343,17 @@
       - Commands:
         - get
         - list
+        - preview
         - run
+      - Custom Sounds:
+        - list
+      - Custom User Status:
+        - list
       - Emoji Custom:
-        - get
+        - create
+        - delete
+        - list
+        - update
       - Groups:
         - addAll
         - addLeader
@@ -369,17 +405,30 @@
         - setTopic
       - Integration:
         - create
+        - get
         - history
         - list
         - remove
+      - Invites:
+        - findOrCreateInvite
+        - listInvites
+        - removeInvite
+        - useInviteToken
+        - validateInviteToken
       - Livechat:
         - agent
+        - appearance
         - config
         - custom-fields
         - department
+        - inquiries
+        - integrations.settings
         - message
+        - office-hours
         - room
+        - rooms
         - sms-incoming
+        - triggers
         - users
         - video-call
         - visitor
@@ -390,6 +439,9 @@
         - spotlight
         - statistics
         - statistics.list
+      - OAuthApps:
+        - get
+        - list
       - Permissions:
         - list
         - update
@@ -397,13 +449,17 @@
         - create
         - list
         - addUserToRole
+        - getUsersInRole
       - Push:
         - push.token
         - deletePushToken
       - Rooms:
+        - adminRooms
         - cleanHistory
+        - createDiscussion
         - favorite
         - get
+        - getDiscussions
         - info
         - leave
         - saveNotification
@@ -421,8 +477,10 @@
         - read
         - unread
       - Users:
+        - presence
         - create
         - createToken
+        - deactivateIdle
         - delete
         - deleteOwnAccount
         - forgotPassword
@@ -431,20 +489,26 @@
         - getPersonalAccessTokens
         - getPresence
         - get-preferences
+        - getStatus
         - getUsernameSuggestion
         - info
         - list
         - regeneratePersonalAccessToken
         - register
+        - removeOtherTokens
         - removePersonalAccessToken
+        - requestDataDownload
         - resetAvatar
         - setAvatar
         - set-preferences
         - setActiveStatus
+        - setStatus
         - update
         - updateOwnBasicInfo
       - Video Conference:
         - jitsi-update-timeout
+      - Webdav:
+        - getMyAccounts
       - Offset and Count and Sort Info
       - Rate Limiter
       - Query and Fields Info
@@ -457,14 +521,14 @@
       - Components
       - Themes
 - Bots:
-  - Bots FAQ
   - Bots Architecture
-  - Creating Bot Users
   - Configure Bot Environment
+  - Create and run a Bot:
+    - Botkit Bot
+    - Hubot Bot
+    - Botpress Bot
+    - Rasa Bot
+    - RocketChat SDK Bot
   - Running a bBot Bot
-  - Running a Hubot Bot
-  - Running a Botkit Bot
-  - Running a Rasa Bot
-  - Running a Botpress Bot
 - Community Cookbook:
   - Remote Video Monitoring

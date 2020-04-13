@@ -58,7 +58,6 @@ Here you can also find what articles are incomplete and missing.
         - Sandstorm.io
         - Scalingo
         - Sloppy.io
-        - WeDeploy
     - Docker containers:
         - Generic Linux
         - systemd
@@ -72,7 +71,7 @@ Here you can also find what articles are incomplete and missing.
         - Multiple Instances to Improve Performance
         - Migrating Meteor Mongo
         - OpenSUSE
-        - <span class="incomplete">[RedHat](../missing-and-outdated-list/index.html#redhat)</span>
+        - <span class="incomplete">[RedHat](../missing-and-outdated-list/index.html)</span>
         - Ubuntu:
             - Snaps:
                 - AutoSSl
@@ -86,7 +85,7 @@ Here you can also find what articles are incomplete and missing.
         - Openshift
         - Vagrant
     - Mobile and Desktop Apps
-    - <span class="incomplete">[Updating](../missing-and-outdated-list/index.html#updating)</span>
+    - <span class="incomplete">[Updating](../missing-and-outdated-list/index.html)</span>
         - From 0.x.x to 0.40.0
     - Minimum Requirements
     - Community Supported Install:
@@ -106,23 +105,23 @@ Here you can also find what articles are incomplete and missing.
     - Voice and Video Calls
 - Administrator guides:
     - Account Settings
-    - <span class="missing">[Analytics](../missing-and-outdated-list/index.html#analytics)</span>
-    - <span class="missing">[Auto Translation](../missing-and-outdated-list/index.html#auto-translation)</span>
+    - <span class="missing">[Analytics](../missing-and-outdated-list/index.html)</span>
+    - <span class="missing">[Auto Translation](../missing-and-outdated-list/index.html)</span>
     - Authentication:
         - CAS
         - Ldap
-        - <span class="incomplete">[Oauth](../missing-and-outdated-list/index.html#oauth)</span>
+        - <span class="incomplete">[Oauth](../missing-and-outdated-list/index.html)</span>
         - SAML
-        - <span class="missing">[WordPress](../missing-and-outdated-list/index.html#WordPress)</span>
-        - <span class="missing">[Custom Oauth](../missing-and-outdated-list/index.html#custom-oauth)</span>
-        - <span class="missing">[Using Rocket.Chat as an Oauth provider](../missing-and-outdated-list/index.html#using-rocketchat-as-an-oauth-provider)</span>
-        - <span class="missing">[oauth2 o365](../missing-and-outdated-list/index.html#oauth2-o365)</span>
-    - <span class="missing">[Customizing the UI](../missing-and-outdated-list/index.html#Customizing-the-UI)</span>:
-        - <span class="missing">[Layout](../missing-and-outdated-list/index.html#Layout)</span>
-        - <span class="missing">[Assets](../missing-and-outdated-list/index.html#Assets)</span>
-    - <span class="missing">[Custom Emoji](../missing-and-outdated-list/index.html#adding-custom-emoji)</span>
-    - <span class="missing">[Custom Fields](../missing-and-outdated-list/index.html#custom-fields)</span>
-    - <span class="missing">[Custom Sounds](../missing-and-outdated-list/index.html#adding-custom-sounds)</span>
+        - <span class="missing">[WordPress](../missing-and-outdated-list/index.html)</span>
+        - <span class="missing">[Custom Oauth](../missing-and-outdated-list/index.html)</span>
+        - <span class="missing">[Using Rocket.Chat as an Oauth provider](../missing-and-outdated-list/index.html)</span>
+        - <span class="missing">[oauth2 o365](../missing-and-outdated-list/index.html)</span>
+    - <span class="missing">[Customizing the UI](../missing-and-outdated-list/index.html)</span>:
+        - <span class="missing">[Layout](../missing-and-outdated-list/index.html)</span>
+        - <span class="missing">[Assets](../missing-and-outdated-list/index.html)</span>
+    - Custom Emoji
+    - Custom Fields
+    - Custom Sounds
     - Database-Migration
     - Email:
         - Setup
@@ -133,16 +132,16 @@ Here you can also find what articles are incomplete and missing.
         - Amazon S3
         - Google Cloud Storage
         - Minio
-        - <span class="missing">[GridFS](../missing-and-outdated-list/index.html#GridFS)</span>
-        - <span class="missing">[Local File System](../missing-and-outdated-list/index.html#Local-File-System)</span>
-    - <span class="missing">[General Settings](../missing-and-outdated-list/index.html#General-Settings)</span>
-        - <span class="missing">[General Section](../missing-and-outdated-list/index.html#General-Section)</span>
-        - <span class="missing">[Message Section](../missing-and-outdated-list/index.html#Message-Section)</span>
+        - <span class="missing">[GridFS](../missing-and-outdated-list/index.html)</span>
+        - <span class="missing">[Local File System](../missing-and-outdated-list/index.html)</span>
+    - <span class="missing">[General Settings](../missing-and-outdated-list/index.html)</span>
+        - <span class="missing">[General Section](../missing-and-outdated-list/index.html)</span>
+        - <span class="missing">[Message Section](../missing-and-outdated-list/index.html)</span>
     - Hubot
     - Import:
         - CSV
         - HipChat:
-            - <span class="incomplete">[Cloud](../missing-and-outdated-list/index.html#hipchat-cloud)</span>
+            - <span class="incomplete">[Cloud](../missing-and-outdated-list/index.html)</span>
             - Enterprise
         - Slack:
             - SlackBridge
@@ -175,7 +174,7 @@ Here you can also find what articles are incomplete and missing.
         - Livechat Queues
     - Notifications:
         - Push Notifications
-    - <span class="incomplete">[Permissions](../missing-and-outdated-list/index.html#Permissions)</span>
+    - Permissions
     - Plug-ins:
         - Drupal
         - Pidgin
@@ -185,25 +184,20 @@ Here you can also find what articles are incomplete and missing.
 - Developer guides:
     - Quick Start
     - Branches and Releases
+    - Client Compatibility Matrix
     - Code Styleguide:
-        - <span class="incomplete">[Less](../missing-and-outdated-list/index.html#Less)</span>
+        - <span class="incomplete">[Less](../missing-and-outdated-list/index.html)</span>
     - Deeplink
     - Deprecation
     - Iframe Integration:
-        - <span class="missing">[Authentication](../missing-and-outdated-list/index.html#Authentication)</span>
+        - <span class="missing">[Authentication](../missing-and-outdated-list/index.html)</span>
         - Commands
         - Events
     - Embedded Layout
-    - <span class="missing">[Internationalization](../missing-and-outdated-list/index.html#Internationalization)</span>
+    - <span class="missing">[Internationalization](../missing-and-outdated-list/index.html)</span>
     - Livechat API
     - Mobile Apps
         - Supporting SSL
-        - Supported Servers Versions
-    - GraphQL API:
-        - Authentication
-        - Schema
-        - Setup
-        - Subscription
     - Realtime-API:
         - Method Calls:
             - Login
@@ -261,11 +255,16 @@ Here you can also find what articles are incomplete and missing.
             - logout
             - me
             - twitter
+        - AutoTranslate:
+            - getSupportedLanguages
+            - saveSettings
+            - translateMessage
         - Channels:
             - addAll
             - addLeader
             - addModerator
             - addOwner
+            - anonymousread
             - archive
             - close
             - counters
@@ -304,9 +303,18 @@ Here you can also find what articles are incomplete and missing.
             - unarchive
         - Chat:
             - delete
+            - followMessage
             - getDeletedMessages
+            - getDiscussions
+            - getMentionedMessages
             - getMessage
             - getMessageReadReceipts
+            - getPinnedMessages
+            - getSnippetedMessages
+            - getSnippetedMessageById
+            - getStarredMessages
+            - getThreadMessages
+            - getThreadsList
             - pinMessage
             - postMessage
             - react
@@ -314,6 +322,9 @@ Here you can also find what articles are incomplete and missing.
             - search
             - starMessage
             - sendMessage
+            - syncThreadMessages
+            - syncThreadsList
+            - unfollowMessage
             - unPinMessage
             - unStarMessage
             - update
@@ -322,8 +333,15 @@ Here you can also find what articles are incomplete and missing.
             - get
             - list
             - run
-        -Emoji Custom:
-            - get
+        - Custom Sounds:
+            - list
+        - Custom User Status:
+            - list
+        - Emoji Custom:
+            - create
+            - delete
+            - list
+            - update
         - Groups:
             - addAll
             - addLeader
@@ -375,17 +393,30 @@ Here you can also find what articles are incomplete and missing.
             - setTopic
         - Integration:
             - create
+            - get
             - history
             - list
             - remove
+        - Invites:
+            - findOrCreateInvite
+            - listInvites
+            - removeInvite
+            - useInviteToken
+            - validateInviteToken
         - Livechat:
             - agent
+            - appearance
             - config
             - custom-fields
             - department
+            - inquiries
+            - integrations.settings
             - message
+            - office-hours
             - room
+            - rooms
             - sms-incoming
+            - triggers
             - users
             - video-call
         - Miscellaneous:
@@ -395,6 +426,9 @@ Here you can also find what articles are incomplete and missing.
             - spotlight
             - statistics
             - statistics.list
+        - OAuthApps:
+            - get
+            - list
         - Permissions:
             - list-all
             - update
@@ -402,13 +436,17 @@ Here you can also find what articles are incomplete and missing.
             - create
             - list
             - addUserToRole
+            - getUsersInRole
         - Push:
             - push.token
             - deletePushToken
         - Rooms:
+            - adminRooms
             - cleanHistory
+            - createDiscussion
             - favorite
             - get
+            - getDiscussions
             - info
             - leave
             - saveNotification
@@ -423,8 +461,10 @@ Here you can also find what articles are incomplete and missing.
             - read
             - unread
         - Users:
+            - presence
             - create
             - createToken
+            - deactivateIdle
             - delete
             - deleteOwnAccount
             - forgotPassword
@@ -433,35 +473,37 @@ Here you can also find what articles are incomplete and missing.
             - getPersonalAccessTokens
             - getPresence
             - get-preferences
+            - getStatus
             - getUsernameSuggestion
             - info
             - list
             - regeneratePersonalAccessToken
             - register
+            - removeOtherTokens
             - removePersonalAccessToken
+            - requestDataDownload
             - resetAvatar
             - setAvatar
             - set-preferences
             - setActiveStatus
+            - setStatus
             - update
             - updateOwnBasicInfo
         - Video Conference:
             - jitsi-update-timeout
+        - Webdav:
+            - getMyAccounts
         - Offset and Count and Sort Info
         - Rate Limiter
         - Query and Fields Info
         - Personal Access Tokens
-        - <span class="incomplete">[Schema Definition](../missing-and-outdated-list#Schema-Definition)</span>
-        - <span class="incomplete">[Testing](../missing-and-outdated-list#Testing)</span>
+        - <span class="incomplete">[Schema Definition](../missing-and-outdated-list)</span>
+        - <span class="incomplete">[Testing](../missing-and-outdated-list)</span>
         - Troubleshooting
         - UI and Theming:
         - Colors
         - Components
         - Themes
-        - GraphQL API:
-            - Authentication
-            - Schema
-            - Subscription
 - Bots:
     - Bots FAQ
     - Bots Architecture
